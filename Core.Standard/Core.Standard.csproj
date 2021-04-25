@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="INeuron.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Initializers\NguyenWidrowFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ISynapse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SOM\INeighborhoodFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SOM\KohonenConnector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SOM\KohonenLayer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SOM\KohonenNetwork.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SOM\KohonenSynapse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SOM\NeighborhoodFunctions\GaussianFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SOM\PositionNeuron.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>
