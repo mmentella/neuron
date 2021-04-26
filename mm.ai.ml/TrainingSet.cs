@@ -15,7 +15,7 @@ namespace mm.ai.ml
 
         public int InputVectorLength { get; }
         public int OutputVectorLength { get; }
-        public List<TrainingSample> TrainingSamples { get; }
+        public IList<TrainingSample> TrainingSamples { get; }
 
         public void Add(TrainingSample sample)
         {
