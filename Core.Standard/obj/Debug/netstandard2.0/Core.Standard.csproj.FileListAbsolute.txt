@@ -1,9 +1,0 @@
-C:\Users\Foxyh\Downloads\NeuronDotNet Source\Core.Standard\bin\Debug\netstandard2.0\Core.Standard.deps.json
-C:\Users\Foxyh\Downloads\NeuronDotNet Source\Core.Standard\bin\Debug\netstandard2.0\Core.Standard.dll
-C:\Users\Foxyh\Downloads\NeuronDotNet Source\Core.Standard\bin\Debug\netstandard2.0\Core.Standard.pdb
-C:\Users\Foxyh\Downloads\NeuronDotNet Source\Core.Standard\obj\Debug\netstandard2.0\Core.Standard.csprojAssemblyReference.cache
-C:\Users\Foxyh\Downloads\NeuronDotNet Source\Core.Standard\obj\Debug\netstandard2.0\Core.Standard.csproj.CoreCompileInputs.cache
-C:\Users\Foxyh\Downloads\NeuronDotNet Source\Core.Standard\obj\Debug\netstandard2.0\Core.Standard.AssemblyInfoInputs.cache
-C:\Users\Foxyh\Downloads\NeuronDotNet Source\Core.Standard\obj\Debug\netstandard2.0\Core.Standard.AssemblyInfo.cs
-C:\Users\Foxyh\Downloads\NeuronDotNet Source\Core.Standard\obj\Debug\netstandard2.0\Core.Standard.dll
-C:\Users\Foxyh\Downloads\NeuronDotNet Source\Core.Standard\obj\Debug\netstandard2.0\Core.Standard.pdb
