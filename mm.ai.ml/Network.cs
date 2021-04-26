@@ -67,12 +67,56 @@ namespace mm.ai.ml
 
         public void Learn(TrainingSet trainingSet, int trainingEpochs)
         {
-            throw new NotImplementedException();
+            if ((trainingSet.InputVectorLength != InputLayer.Neurons.Count())
+                || (TrainingMethod == TrainingMethod.Supervised && trainingSet.OutputVectorLength != OutputLayer.Neurons.Count())
+                || (TrainingMethod == TrainingMethod.Unsupervised && trainingSet.OutputVectorLength != 0))
+            {
+                throw new ArgumentException("Invalid training set");
+            }
+
+            // Reset isStopping
+            isStopping = false;
+
+            // Re-Initialize the network
+            Initialize();
+            for (int currentIteration = 0; currentIteration < trainingEpochs; currentIteration++)
+            {
+                // Beginning a new training epoch
+                OnBeginEpoch(currentIteration, trainingSet);
+
+                // Check for Jitter Epoch
+                if (JitterEpoch > 0 && currentIteration % JitterEpoch == 0)
+                {
+                    foreach (var connector in Connectors)
+                    {
+                        connector.Jitter(JitterNoiseLimit);
+                    }
+                }
+
+                foreach(var sample in trainingSet.TrainingSamples.OrderBy(ts => Guid.NewGuid()))
+                {
+                    // Learn a random training sample
+                    OnBeginSample(currentIteration, sample);
+                    LearnSample(sample, currentIteration, trainingEpochs);
+                    OnEndSample(currentIteration, sample);
+
+                    // Check if we need to stop
+                    if (isStopping) { isStopping = false; return; }
+                }
+
+                // Training Epoch successfully complete
+                OnEndEpoch(currentIteration, trainingSet);
+
+                // Check if we need to stop
+                if (isStopping) { isStopping = false; return; }
+            }
         }
 
         public void Learn(TrainingSample trainingSample, int currentIteration, int trainingEpochs)
         {
-            throw new NotImplementedException();
+            OnBeginSample(currentIteration, trainingSample);
+            LearnSample(trainingSample, currentIteration, trainingEpochs);
+            OnEndSample(currentIteration, trainingSample);
         }
 
         public double[] Run(double[] input)
@@ -88,6 +132,14 @@ namespace mm.ai.ml
         protected virtual void OnBeginEpoch(int currentIteration, TrainingSet trainingSet)
         {
             BeginEpochEvent?.Invoke(this, new TrainingEpochEventArgs(currentIteration, trainingSet));
+        }
+
+        protected virtual void OnEndEpoch(int currentIteration, TrainingSet trainingSet)
+        {
+            if (EndEpochEvent != null)
+            {
+                EndEpochEvent(this, new TrainingEpochEventArgs(currentIteration, trainingSet));
+            }
         }
 
         protected virtual void OnBeginSample(int currentIteration, TrainingSample currentSample)
