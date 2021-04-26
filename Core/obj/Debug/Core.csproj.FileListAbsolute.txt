@@ -1,6 +1,0 @@
-C:\Users\Foxyh\Downloads\NeuronDotNet Source\Core\bin\Debug\NeuronDotNet.Core.dll
-C:\Users\Foxyh\Downloads\NeuronDotNet Source\Core\bin\Debug\NeuronDotNet.Core.pdb
-C:\Users\Foxyh\Downloads\NeuronDotNet Source\Core\obj\Debug\Core.csprojAssemblyReference.cache
-C:\Users\Foxyh\Downloads\NeuronDotNet Source\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
-C:\Users\Foxyh\Downloads\NeuronDotNet Source\Core\obj\Debug\NeuronDotNet.Core.dll
-C:\Users\Foxyh\Downloads\NeuronDotNet Source\Core\obj\Debug\NeuronDotNet.Core.pdb
