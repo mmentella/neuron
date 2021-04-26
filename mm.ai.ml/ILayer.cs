@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace mm.ai.ml
 {
@@ -18,9 +16,6 @@ namespace mm.ai.ml
         ILearningRateFunction LearningRateFunction { get; }
 
         void Initialize();
-        void SetLearningRate(double learningRate);
-        void SetLearningRate(double initialLearningRate, double finalLearningRate);
-        void SetLearningRate(ILearningRateFunction learningRateFunction);
 
         void SetInput(double[] input);
         double[] GetOutput();

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace mm.ai.ml
+﻿namespace mm.ai.ml
 {
     public interface INeuron
     {

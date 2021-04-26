@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace mm.ai.ml
 {
-    public class TrainingSampleEventArgs:EventArgs
+    public class TrainingSampleEventArgs : EventArgs
     {
         public TrainingSampleEventArgs(int trainingIteration, TrainingSample trainingSample)
         {

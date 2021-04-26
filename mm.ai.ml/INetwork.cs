@@ -9,7 +9,6 @@ namespace mm.ai.ml
 
         int LayerCount { get; }
         IEnumerable<ILayer> Layers { get; }
-        ILayer this[int index] { get; }
 
         int ConnectorCount { get; }
         IEnumerable<IConnector> Connectors { get; }
@@ -18,11 +17,8 @@ namespace mm.ai.ml
 
         event TrainingSampleEventHandler BeginSampleEvent;
         event TrainingSampleEventHandler EndSampleEvent;
+        event TrainingEpochEventHandler BeginEpochEvent;
         event TrainingEpochEventHandler EndEpochEvent;
-
-        void SetLearningRate(double learningRate);
-        void SetLearningRate(double initialLearningRate, double finalLearningRate);
-        void SetLearningRate(ILearningRateFunction learningRateFunction);
 
         void Initialize();
 
